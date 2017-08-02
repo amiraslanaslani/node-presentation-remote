@@ -113,7 +113,8 @@ module.exports = function() {
             var jarPath = path.join(__dirname, 'jar', 'key-sender.jar');
 
             var command = 'java -jar ' + jarPath + ' ' + arrParams.join(' ') + module.getCommandLineOptions();
-            console.log('Sending: ' + command);
+            //console.log('Sending: ' + command);
+            console.log(arrParams.join(' '));
 
             return exec(command, {}, function(error, stdout, stderr) {
                 if (error == null) {
