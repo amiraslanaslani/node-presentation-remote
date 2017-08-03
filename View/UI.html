@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=565, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#2c3e50">
 
     <style type="text/css">
       /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -48,24 +49,24 @@
         <table>
           <tr>
             <td>
-              <a class="ltexts"></a>
+              <a class="ltexts" onclick="httpGet('/vu')"> V+</a>
             </td>
             <td>
               <a ></a>
             </td>
             <td>
-              <a class="ltexts"></a>
+              <a onclick="httpGet('/vmu')" class="ltexts">Mute</a>
             </td>
           </tr>
           <tr>
             <td>
-              <a  class="ltexts"> </a>
+              <a class="ltexts" onclick="httpGet('/vd')">V-</a>
             </td>
             <td>
               <a onclick="httpGet('/up')">&#8679; </a>
             </td>
             <td>
-              <a  class="ltexts"></a>
+              <a onclick="httpGet('/vum')" class="ltexts">Unmute</a>
             </td>
           </tr>
           <tr>

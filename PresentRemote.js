@@ -1,8 +1,9 @@
 var fs = require("fs");
 
 var robot = require(__dirname + "/node-key-sender");
+var volume = require(__dirname + "/volume");
 var server = require(__dirname + "/server");
-var route = require(__dirname + "/router")
+var route = require(__dirname + "/router");
 var localIPs = require(__dirname + "/localip.js");
 
 var port = 8888;
@@ -16,5 +17,5 @@ for (var i = 0, len = ips.length; i < len; i++) {
 console.log("");
 
 fs.readFile(__dirname + '/View/UI.html',function (err, mainFile){
-  server.start(route.route,robot,mainFile,port);
+  server.start(route.route,robot,volume,mainFile,port);
 });

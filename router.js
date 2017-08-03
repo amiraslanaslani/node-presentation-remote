@@ -1,4 +1,4 @@
-function route(path,robot,mainFile){
+function route(path,robot,volume,mainFile){
   //console.log("About to route a request for " + path);
   switch (path) {
     case '/right':
@@ -27,6 +27,18 @@ function route(path,robot,mainFile){
       break;
     case '/end':
       robot.sendKey('end');
+      break;
+    case '/vu':
+      volume.incVol();
+      break;
+    case '/vd':
+      volume.decVol();
+      break;
+    case '/vmu':
+      volume.mute();
+      break;
+    case '/vum':
+      volume.unmute();
       break;
     case '/':
     default:
