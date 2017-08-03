@@ -1,5 +1,5 @@
 # Presentation Remote JS
-A simple network-based remote control with NodeJS (and [node-key-sender module][https://github.com/garimpeiro-it/node-key-sender], that used in project, uses Java).
+A simple network-based remote control with NodeJS (and [node-key-sender module](https://github.com/garimpeiro-it/node-key-sender], that used in project, uses Java).
 Currently, these can be controlled:
 + System volume. (increase, decrease, mute and unmute)
 + Up, Down, Left and Right buttons.
@@ -16,7 +16,7 @@ Then you should see the output that says:
 Open below address(es) in browser:
 http://<IP-ADDRESS>:8888
 ```
-And now you have access to your system from http://<IP-ADDRESS>:8888 .
+And now you have access to your system from http://\<IP-ADDRESS\>:8888 .
 
 ## Note:
 Currently, volume controls (increase, decrease, mute and unmute) are only active for Gnu/Linux.
