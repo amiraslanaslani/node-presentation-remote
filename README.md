@@ -1,5 +1,5 @@
 # Presentation Remote JS
-A simple network-based remote control with NodeJS (and [node-key-sender module](https://github.com/garimpeiro-it/node-key-sender], that used in project, uses Java).
+A simple network-based remote control with NodeJS (and [node-key-sender module](https://github.com/garimpeiro-it/node-key-sender), that used in project, uses Java).
 Currently, these can be controlled:
 + System volume. (increase, decrease, mute and unmute)
 + Up, Down, Left and Right buttons.
