@@ -15,7 +15,7 @@
   ],
   "homepage": "",
   "license": "MIT",
-  "main": "PresentRemote.js",
-  "name": "Present Remote JS",
+  "main": "PresentationRemote.js",
+  "name": "Presentation Remote JS",
   "version": "0.0.1"
 }
