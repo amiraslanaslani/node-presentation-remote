@@ -1,12 +1,15 @@
 var fs = require("fs");
 
-var robot = require(__dirname + "/node-key-sender");
+var robot = require(__dirname + "/node_modules/node-key-sender");
 var volume = require(__dirname + "/volume");
 var server = require(__dirname + "/server");
 var route = require(__dirname + "/router");
-var localIPs = require(__dirname + "/localip.js");
+var localIPs = require(__dirname + "/localip");
+var LoadArguments = require(__dirname + "/loadarguments");
 
-var port = 8888;
+LoadArguments.load(process.argv);
+
+var port = LoadArguments.getPort();
 
 var ips = localIPs.get();
 console.log("Open below address(es) in browser:");
