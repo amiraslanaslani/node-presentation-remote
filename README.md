@@ -14,9 +14,10 @@ node /Path/To/PresentationRemoteJS [-p <PORT>]
 Then you should see the output that says:
 ```
 Open below address(es) in browser:
-http://<IP-ADDRESS>:8888
+http://<IP-ADDRESS>:<PORT>
 ```
 And now you have access to your system from http://\<IP-ADDRESS\>:\<PORT\> .
+Also note that the default port is 8888.
 
 ## Note:
 Currently, volume controls (increase, decrease, mute and unmute) are only active for Gnu/Linux and MS-Windows.
