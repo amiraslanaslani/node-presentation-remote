@@ -13,9 +13,16 @@
     "remote",
     "presentation"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amiraslanaslani/presentation-remote.git"
+  },
   "homepage": "",
   "license": "MIT",
-  "main": "PresentationRemote.js",
+  "main": "index.js",
   "name": "Presentation Remote JS",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "dependencies": {
+    "node-key-sender": "^1.0.9"
+  }
 }
