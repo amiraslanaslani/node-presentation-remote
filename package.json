@@ -20,7 +20,7 @@
   "homepage": "",
   "license": "MIT",
   "main": "index.js",
-  "name": "Presentation Remote JS",
+  "name": "presentation-remote",
   "version": "0.0.1",
   "dependencies": {
     "node-key-sender": "^1.0.9"
