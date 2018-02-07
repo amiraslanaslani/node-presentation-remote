@@ -32,78 +32,70 @@
         cursor: pointer;
       }
       table td a:hover{
-        background-color: #212F3C;
+        background-colorsendKey: #212F3C;
       }
       .ltexts{
         font-size: 20px;
       }
     </style>
-    <script>
-    function httpGet(theUrl)
-    {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-        xmlHttp.send( null );
-        return xmlHttp.responseText;
-    }
-    </script>
+    <script src="pr-lib.js"></script>
 </head>
 <body>
     <div class="cover">
         <table>
           <tr>
             <td>
-              <a class="ltexts" onclick="httpGet('/vu')"> V+</a>
+              <a class="ltexts" onclick="sendKey('/vu')"> V+</a>
             </td>
             <td>
               <a ></a>
             </td>
             <td>
-              <a onclick="httpGet('/vmu')" class="ltexts">Mute</a>
+              <a onclick="sendKey('/vmu')" class="ltexts">Mute</a>
             </td>
           </tr>
           <tr>
             <td>
-              <a class="ltexts" onclick="httpGet('/vd')">V-</a>
+              <a class="ltexts" onclick="sendKey('/vd')">V-</a>
             </td>
             <td>
-              <a onclick="httpGet('/up')">&#8679; </a>
+              <a onclick="sendKey('/up')">&#8679; </a>
             </td>
             <td>
-              <a onclick="httpGet('/vum')" class="ltexts">Unmute</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a onclick="httpGet('/left')">&#8678; </a>
-            </td>
-            <td>
-              <a onclick="httpGet('/enter')">&#8626; </a>
-            </td>
-            <td>
-              <a onclick="httpGet('/right')">&#8680; </a>
+              <a onclick="sendKey('/vum')" class="ltexts">Unmute</a>
             </td>
           </tr>
           <tr>
             <td>
-              <a onclick="httpGet('/home')" class="ltexts">Home</a>
+              <a onclick="sendKey('/left')">&#8678; </a>
             </td>
             <td>
-              <a onclick="httpGet('/down')">&#8681; </a>
+              <a onclick="sendKey('/enter')">&#8626; </a>
             </td>
             <td>
-              <a onclick="httpGet('/end')" class="ltexts">End</a>
+              <a onclick="sendKey('/right')">&#8680; </a>
             </td>
           </tr>
           <tr>
             <td>
-              <a onclick="httpGet('/pu')" class="ltexts">Page&#8593;</a>
+              <a onclick="sendKey('/home')" class="ltexts">Home</a>
+            </td>
+            <td>
+              <a onclick="sendKey('/down')">&#8681; </a>
+            </td>
+            <td>
+              <a onclick="sendKey('/end')" class="ltexts">End</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a onclick="sendKey('/pu')" class="ltexts">Page&#8593;</a>
             </td>
             <td>
               <a> </a>
             </td>
             <td>
-              <a onclick="httpGet('/pd')" class="ltexts">Page&#8595;</a>
+              <a onclick="sendKey('/pd')" class="ltexts">Page&#8595;</a>
             </td>
           </tr>
         </table>

@@ -1,8 +1,9 @@
 var screenCapture = require('nodejs-screen-capture');
 var lastScreenshot = '';
 
-function route(path,robot,volume,mainFile){
-  //console.log("About to route a request for " + path);
+function route(path,robot,volume,mainFile,prlibjs){
+  var defaultContentType = 'text/html';
+
   switch (path) {
     case '/right':
       robot.sendKey('right');
@@ -52,13 +53,16 @@ function route(path,robot,volume,mainFile){
               lastScreenshot = base64
           }
       );
-      return lastScreenshot;
+      return [lastScreenshot,defaultContentType];
+      break;
+    case '/pr-lib.js':
+      return [prlibjs,'application/javascript'];
       break;
     case '/':
     default:
-      return mainFile;
+      return [mainFile,defaultContentType];
   }
-  return '';
+  return ['',defaultContentType];
 }
 
 exports.route = route;
