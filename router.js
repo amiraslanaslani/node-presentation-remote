@@ -1,3 +1,6 @@
+var screenCapture = require('nodejs-screen-capture');
+var lastScreenshot = '';
+
 function route(path,robot,volume,mainFile){
   //console.log("About to route a request for " + path);
   switch (path) {
@@ -39,6 +42,17 @@ function route(path,robot,volume,mainFile){
       break;
     case '/vum':
       volume.unmute();
+      break;
+    case '/screen':
+      screenCapture.captureAndGetBase64(
+          400,
+          -1,
+          screenCapture.IMAGE_FORMAT_GIF,
+          function (base64) {
+              lastScreenshot = base64
+          }
+      );
+      return lastScreenshot;
       break;
     case '/':
     default:
