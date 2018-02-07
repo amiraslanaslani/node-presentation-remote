@@ -1,7 +1,7 @@
 var fs = require("fs");
+var robot = require("node-key-sender");
+var volume = require("os-volume-controll");
 
-var robot = require(__dirname + "/node_modules/node-key-sender");
-var volume = require(__dirname + "/volume");
 var server = require(__dirname + "/server");
 var route = require(__dirname + "/router");
 var localIPs = require(__dirname + "/localip");

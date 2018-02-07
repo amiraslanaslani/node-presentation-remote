@@ -7,7 +7,7 @@ Currently, these can be controlled:
 + Home and End buttons.
 
 ## Usage
-If we assume that the program is in the /Path/To/PresentationRemoteJS folder, you must use the following command to run server on \<PORT\> port number:
+If we assume that the program is in the /Path/To/PresentationRemoteJS folder, you must use the following command to run server on `<PORT>` port number:
 ```
 node /Path/To/PresentationRemoteJS [-p <PORT>]
 ```
@@ -16,8 +16,8 @@ Then you should see the output that says:
 Open below address(es) in browser:
 http://<IP-ADDRESS>:<PORT>
 ```
-And now you have access to your system from http://\<IP-ADDRESS\>:\<PORT\> .
-Also note that the default port is 8888.
+And now you have access to your system from `http://<IP-ADDRESS>:<PORT>` .
+Also note that the default port is `8888`.
 
 ## Note:
 Currently, volume controls (increase, decrease, mute and unmute) are only active for Gnu/Linux and MS-Windows.
