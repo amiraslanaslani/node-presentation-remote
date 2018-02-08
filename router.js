@@ -1,5 +1,9 @@
-function route(path,robot,volume,mainFile){
-  //console.log("About to route a request for " + path);
+var screenCapture = require('nodejs-screen-capture');
+var lastScreenshot = '';
+
+function route(path,robot,volume,mainFile,prlibjs){
+  var defaultContentType = 'text/html';
+
   switch (path) {
     case '/right':
       robot.sendKey('right');
@@ -40,11 +44,25 @@ function route(path,robot,volume,mainFile){
     case '/vum':
       volume.unmute();
       break;
+    case '/screen':
+      screenCapture.captureAndGetBase64(
+          280,
+          -1,
+          screenCapture.IMAGE_FORMAT_GIF,
+          function (base64) {
+              lastScreenshot = base64
+          }
+      );
+      return [lastScreenshot,defaultContentType];
+      break;
+    case '/pr-lib.js':
+      return [prlibjs,'application/javascript'];
+      break;
     case '/':
     default:
-      return mainFile;
+      return [mainFile,defaultContentType];
   }
-  return '';
+  return ['',defaultContentType];
 }
 
 exports.route = route;

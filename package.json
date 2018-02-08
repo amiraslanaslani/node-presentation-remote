@@ -24,6 +24,7 @@
   "version": "0.1.0",
   "dependencies": {
     "node-key-sender": "^1.0.10",
+    "nodejs-screen-capture": "^0.2.0",
     "os-volume-controll": "^0.1.0"
   }
 }

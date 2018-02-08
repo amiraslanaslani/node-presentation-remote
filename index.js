@@ -19,6 +19,8 @@ for (var i = 0, len = ips.length; i < len; i++) {
 
 console.log("");
 
-fs.readFile(__dirname + '/View/UI.html',function (err, mainFile){
-  server.start(route.route,robot,volume,mainFile,port);
+fs.readFile(__dirname + '/View/pr-lib.js',function (err, prlibjs){
+    fs.readFile(__dirname + '/View/UI.html',function (err, mainFile){
+      server.start(route.route,robot,volume,mainFile,port,prlibjs);
+    });
 });
