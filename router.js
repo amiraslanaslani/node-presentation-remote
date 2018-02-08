@@ -46,7 +46,7 @@ function route(path,robot,volume,mainFile,prlibjs){
       break;
     case '/screen':
       screenCapture.captureAndGetBase64(
-          400,
+          280,
           -1,
           screenCapture.IMAGE_FORMAT_GIF,
           function (base64) {

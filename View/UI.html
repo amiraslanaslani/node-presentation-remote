@@ -25,7 +25,7 @@
       table td a{
         display: block;
         width: 90%;
-        height: 50px;
+        height: 35px;
         border: 1px solid #222;
         font-size: 40px;
         background-color: #2c3e50;
@@ -37,12 +37,18 @@
       .ltexts{
         font-size: 20px;
       }
+      #screen{
+        width: 290px;
+      }
     </style>
     <script src="pr-lib.js"></script>
 </head>
 <body>
     <div class="cover">
         <table>
+          <tr>
+              <td colspan="3"><img src="" id="screen"></td>
+          </tr>
           <tr>
             <td>
               <a class="ltexts" onclick="sendKey('/vu')"> V+</a>
@@ -101,7 +107,8 @@
         </table>
         <p>Made with &#9829; by <a href="http://engow.com">Engow</a></p>
     </div>
-
-
+    <script>
+        setImageAsScreen("screen");
+    </script>
 </body>
 </html>

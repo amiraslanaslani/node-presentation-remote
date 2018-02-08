@@ -18,5 +18,5 @@ function setImageAsScreen(id){
     var screenImage = document.getElementById(id);
     setInterval(function () {
         screenImage.src = uriPrefix + sendKey("/screen");
-    }, 400);
+    }, 300);
 }
