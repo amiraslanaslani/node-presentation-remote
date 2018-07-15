@@ -20,6 +20,6 @@ And now you have access to your system from `http://<IP-ADDRESS>:<PORT>` .
 Also note that the default port is `8888`.
 
 ## Note:
-Currently, volume controls (increase, decrease, mute and unmute) are only active for Gnu/Linux and MS-Windows.
+Currently, volume controls (increase, decrease, mute and unmute) are only active for Gnu/Linux, MacOS and MS-Windows.
 ## Note:
 I'm not a NodeJS programmer and this is my first project in NodeJS; For this reason this is not a clean and pretty code! I will try to clean it and make it more professional at my leisure time.
