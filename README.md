@@ -24,5 +24,5 @@ Currently, volume controls (increase, decrease, mute and unmute) are only active
 ## Note:
 I'm not a NodeJS programmer and this is my first project in NodeJS; So this project is not clean and pretty code! I will try to clean it and make it more professional at my leisure time.
 
-## Changes (V. 0.1.1)
+## Changes (V. 0.2.0)
 + Screen presenting protocol changed from HTTP to WebSocket.
