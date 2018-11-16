@@ -1,5 +1,9 @@
-var screenCapture = require('nodejs-screen-capture');
 var lastScreenshot = '';
+var screenSocketPortIP = "";
+
+function setScreenSocketPortIP(string){
+  screenSocketPortIP = string;
+}
 
 function route(path,robot,volume,mainFile,prlibjs){
   var defaultContentType = 'text/html';
@@ -44,19 +48,8 @@ function route(path,robot,volume,mainFile,prlibjs){
     case '/vum':
       volume.unmute();
       break;
-    case '/screen':
-      screenCapture.captureAndGetBase64(
-          280,
-          -1,
-          screenCapture.IMAGE_FORMAT_GIF,
-          function (base64) {
-              lastScreenshot = base64
-          }
-      );
-      return [lastScreenshot,defaultContentType];
-      break;
     case '/pr-lib.js':
-      return [prlibjs,'application/javascript'];
+      return ["var serverSocketIPPort = '" + screenSocketPortIP + "';\n\r" + prlibjs,'application/javascript'];
       break;
     case '/':
     default:
@@ -66,3 +59,4 @@ function route(path,robot,volume,mainFile,prlibjs){
 }
 
 exports.route = route;
+exports.setScreenSocketPortIP = setScreenSocketPortIP;

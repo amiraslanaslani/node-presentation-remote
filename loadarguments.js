@@ -1,5 +1,6 @@
 var args;
 var port = 8888;
+var screenPort = 8787;
 
 function load(arguments){
   args = arguments;
@@ -8,13 +9,19 @@ function load(arguments){
       case '-p':
         port = args[i + 1]?args[i + 1]:port;
         break;
+      case '-s':
+        screenPort = args[i + 1]?args[i + 1]:screenPort;
+        break;
     }
   }
 }
 
-function getPort(){
+exports.getPort = function(){
   return port;
 }
 
+exports.getScreenPort = function(){
+  return screenPort;
+}
+
 exports.load = load;
-exports.getPort = getPort;
